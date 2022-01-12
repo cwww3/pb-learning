@@ -1,0 +1,15 @@
+//声明proto的版本 只有 proto3 才支持 gRPC
+syntax = "proto3";
+// 指定当前proto文件属于test包
+package test;
+// 将编译后文件输出在 github.com/lixd/grpc-go-example/helloworld/helloworld 目录
+option go_package = "github.com/cwww3/pb-learning/test";
+
+// 具体的参数定义
+message TestRequest {
+  string name = 1;
+}
+
+message TestReply {
+  string message = 1;
+}
